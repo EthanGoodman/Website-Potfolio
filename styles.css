@@ -1,0 +1,219 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
+html, body {
+    height: 100%; /* Set full height for the body */
+    display: flex; /* Use flexbox to arrange content */
+    flex-direction: column; /* Align content vertically */
+}
+
+body {
+    font-family: 'Lexend';
+    line-height: 1.6;
+    color: #5b5554;
+    background-image: url('https://img.freepik.com/free-photo/mountain-peaks-night-time_198169-289.jpg?t=st=1730258633~exp=1730262233~hmac=26b38b7e128fabfee5703c0d747f0b95fd64b3cee26f4ae720cae6562bad0496&w=1480'); /* Body image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fix the background image */
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Adjust for header height */
+    overflow: auto; /* Allow scrolling */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Font family only for headers */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    font-family: 'Inter';
+    top: 0; /* Positions the header at the top */
+    left: 0; /* Aligns the header to the left */
+    width: 100%; /* Makes the header full width */
+    padding: 20px 0; /* Padding for the header */
+    background-color: rgba(28, 28, 28, 1); /* Set a solid color for the header */
+    color: #fff;
+    text-align: center;
+    z-index: 1000; /* Ensure the header is above other content */
+    transition: transform 0.3s ease, padding 0.3s ease;
+}
+
+/* Header Title */
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    
+    padding: 10px; /* Padding for the text */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Additional styles remain the same */
+
+/* Navigation Styles */
+nav {
+    margin-top: 10px;
+    position: relative; /* Position relative for dropdown positioning */
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none; /* Remove underline by default */
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00d4ff; /* Aqua color for hover effect */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Dropdown container */
+.dropdown {
+    display: inline-block; /* Make dropdown inline with other links */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none; /* Hide by default */
+    position: absolute; /* Absolute positioning */
+    background-color: #ffffff; /* Background color for dropdown */
+    min-width: 160px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Keep dropdown above other content */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown when hovering over the dropdown container */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #ffffff; /* Text color for dropdown links */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Background color on hover */
+}
+
+/* Project Links Style */
+.project a {
+    color: #c2b8ff; /* Initial color for project links */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.project a:hover {
+    color: #00d4ff; /* Aqua color for hover effect */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 2em;
+    max-width: 800px;
+    margin: 2em auto;
+    background-color: #252525;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    scroll-margin-top: 100px;
+    transition: transform 0.2s; /* Smooth transition */
+    flex: 1; /* This allows sections to grow and fill space */
+}
+
+section:hover {
+    transform: scale(1.03);
+}
+
+#intro {
+    text-align: center;
+}
+
+/* Contact Section Styles */
+#contact {
+    color: #ffffff; /* Sets the text color in the contact section */
+}
+
+/* Contact Section Link Style */
+#contact a {
+    color: #c2b8ff; /* Gold color for the email link */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Hover effect for the email link */
+#contact a:hover {
+    color: #00d4ff; /* Changes to pink or any other bright color on hover */
+    text-decoration: underline;
+}
+
+h2 {
+    color: #c2b8ff; /* Matches the darker header color */
+    font-size: 1.75em;
+}
+
+/* Project Section */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    border: 1px solid #383838;
+    padding: 1em;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #353535;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #c2b8ff;
+    position: relative;
+}
+
+.project h3::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #c2b8ff; /* Red underline for project titles */
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s;
+}
+
+.project:hover h3::after {
+    width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    background: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em; /* You can adjust this if needed */
+    font-size: 0.9em;
+}
